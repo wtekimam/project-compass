@@ -1,0 +1,5 @@
+{
+  "name": "project-compass",
+  "owner": { "name": "wtekimam" },
+  "plugins": [{ "name": "project-compass", "source": "./" }]
+}

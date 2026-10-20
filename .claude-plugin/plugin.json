@@ -1,0 +1,1 @@
+{ "name": "project-compass", "version": "0.1.0", "description": "Shows which Firstmate project a draft request points at, above the prompt", "types": "./types/index.d.ts" }
