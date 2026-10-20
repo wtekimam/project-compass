@@ -5,7 +5,8 @@ As you type a request, a line above the prompt shows which registered project it
 
 - `→ acme-website` when one project clearly matches
 - `? ambiguous: metrics / acme-website` when several match equally
-- nothing when the draft gives no hint, starts with `/`, or is a single word
+- `· no project context detected`, dimmed, when a draft of two or more words matches no project
+- nothing when the draft starts with `/` or is a single word
 
 It reads `data/projects.md` from the session's working directory, so it only shows something when Claude Code runs in a Firstmate home.
 A full project name is the strongest signal; a word from a project's description counts when it belongs to that project alone, and a word shared by two or three projects only makes a request ambiguous.

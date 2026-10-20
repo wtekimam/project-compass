@@ -52,7 +52,9 @@ export const register: Register = on => {
 
     return (
       <Box>
-        {g.projects.length === 1 ? (
+        {g.projects.length === 0 ? (
+          <Text dimColor>· no project context detected</Text>
+        ) : g.projects.length === 1 ? (
           <Text color="cyan">→ {g.projects[0]}</Text>
         ) : (
           <Text color="yellow">? ambiguous: {g.projects.join(' / ')}</Text>

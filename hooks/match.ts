@@ -52,5 +52,5 @@ export const guess = (projects: Project[], draft: string): Guess | null => {
       hits.push(p.name)
     }
   }
-  return hits.length ? { projects: hits } : null
+  return { projects: hits }
 }

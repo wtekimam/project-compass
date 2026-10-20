@@ -21,7 +21,10 @@ test('a shared word is ambiguous or silent', () => {
   expect(guess(projects, 'update the marketing copy')).toEqual({ projects: ['metrics', 'acme-website'] })
   expect(guess(projects, 'acme needs a change')).toEqual({ projects: ['acme-portal', 'acme-website', 'acme-notes'] })
   expect(guess(projects, 'acme website footer')).toEqual({ projects: ['acme-website'] })
-  expect(guess(projects, 'refresh the readme please')).toBeNull()
+  expect(guess(projects, 'refresh the readme please')).toEqual({ projects: [] })
+})
+test('a draft with no project match says so', () => {
+  expect(guess(projects, 'what time is it')).toEqual({ projects: [] })
 })
 test('slash commands and single words stay silent', () => {
   expect(guess(projects, '/stow now')).toBeNull()
